@@ -1,8 +1,29 @@
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/63',
+  'unifunc' => 'content_5601d65a77a347_82963106',
+  'file_dependency' => 
+  array (
+    'b768cb5122f68b0b40aa9452cdfba960bf0b05f7' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\main.tpl',
+      1 => 1442960983,
+      2 => 'file',
+    ),
+  ),
+  'cache_lifetime' => 3600,
+),true);
+if ($_valid && !is_callable('content_5601d65a77a347_82963106')) {
+function content_5601d65a77a347_82963106 ($_smarty_tpl) {
+?>
+
+el main principal es este
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>{$pg_title}</title>
+        <title>Centro Odontologíco | Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta http-equiv="Access-Control-Allow-Origin" content="*">
@@ -159,4 +180,5 @@
 
 
     </body>
-</html>
+</html><?php }
+}

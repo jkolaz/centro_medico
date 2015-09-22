@@ -20,8 +20,8 @@ class Index extends CI_Controller{
     
     public function index(){
         $this->load->library( 'Smartyci' );
-        $this->smartyci->useCached( 'index.tpl' );
-
-        $this->smartyci->display( 'index.tpl' );
+        //$this->smartyci->useCached( 'index.tpl' );
+        //$this->smartyci->maintpl = "mainClear";
+        $this->smartyci->show_page('index.tpl');
     }
 }
