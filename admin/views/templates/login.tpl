@@ -1,27 +1,6 @@
-<?php
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'has_nocache_code' => false,
-  'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605b880b84dc5_62408344',
-  'file_dependency' => 
-  array (
-    'b768cb5122f68b0b40aa9452cdfba960bf0b05f7' => 
-    array (
-      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\main.tpl',
-      1 => 1442960983,
-      2 => 'file',
-    ),
-  ),
-  'cache_lifetime' => 3600,
-),true);
-if ($_valid && !is_callable('content_5605b880b84dc5_62408344')) {
-function content_5605b880b84dc5_62408344 ($_smarty_tpl) {
-?>
-
-el main principal es este
 <!DOCTYPE html>
 <html lang="es">
-    
+    {$contentheader}
     <body>
 
         
@@ -42,7 +21,7 @@ el main principal es este
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar {$hola}</button>
                     </div>
                   
                   </form>
@@ -72,8 +51,7 @@ el main principal es este
                     </div>
 
 
-       <?php echo '<?php'; ?>
- include('include/script.php'); <?php echo '?>'; ?>
+       include/scriptk.php
 
          <script type="text/javascript">
             $(document).ready(function (){
@@ -160,5 +138,4 @@ el main principal es este
        
 
     </body>
-</html><?php }
-}
+</html>

@@ -85,4 +85,9 @@ class Smartyci extends Smarty{
         //echo $html."<br>";
         return preg_replace($busca, $reemplaza, $html);
     }
+    function include_template($var, $template, $cache_id = "") {
+        $html = $this->fetch($template . ".tpl", $cache_id);
+        //echo $html;
+        $this->assign($var, $html);
+    }
 }

@@ -2,41 +2,24 @@
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5601d6beb70fc3_23204013',
+  'unifunc' => 'content_5605b8a489e8a6_11717271',
   'file_dependency' => 
   array (
     '9d0156780389cf807170434c0b9f706005f6cf4b' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\mainClear.tpl',
-      1 => 1442961039,
+      1 => 1443215482,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true);
-if ($_valid && !is_callable('content_5601d6beb70fc3_23204013')) {
-function content_5601d6beb70fc3_23204013 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5605b8a489e8a6_11717271')) {
+function content_5605b8a489e8a6_11717271 ($_smarty_tpl) {
 ?>
-el main secundario es este
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Centro Odontologíco | Admin</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-        <meta http-equiv="Access-Control-Allow-Origin" content="*">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="author" content="Crusbel López">
-       
-
-        <link rel="stylesheet" type="text/css" href="css/materialize.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    </head>
+    
     <body>
 
         
@@ -87,16 +70,11 @@ el main secundario es este
                     </div>
 
 
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.js"></script>
-        <script type="text/javascript" src="js/jquery.validate.js"></script>
-        <script type="text/javascript" src="js/sweetalert.min.js"></script>
-        <script type="text/javascript">
+       <?php echo '<?php'; ?>
+ include('include/script.php'); <?php echo '?>'; ?>
+
+         <script type="text/javascript">
             $(document).ready(function (){
-              $('.collapsible').collapsible({
-                    accordion : false 
-                  });
-              $('select').material_select();
               $('.modal-trigger').leanModal();
 
 
@@ -177,6 +155,7 @@ el main secundario es este
 
         </script>
 
+       
 
     </body>
 </html><?php }

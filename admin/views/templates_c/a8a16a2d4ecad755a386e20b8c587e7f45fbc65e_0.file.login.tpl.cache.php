@@ -1,27 +1,31 @@
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-25 16:52:36
+         compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605b880b84dc5_62408344',
+  'unifunc' => 'content_5605c224a42d79_72647381',
   'file_dependency' => 
   array (
-    'b768cb5122f68b0b40aa9452cdfba960bf0b05f7' => 
+    'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\main.tpl',
-      1 => 1442960983,
+      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
+      1 => 1443217940,
       2 => 'file',
     ),
   ),
-  'cache_lifetime' => 3600,
-),true);
-if ($_valid && !is_callable('content_5605b880b84dc5_62408344')) {
-function content_5605b880b84dc5_62408344 ($_smarty_tpl) {
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_5605c224a42d79_72647381')) {
+function content_5605c224a42d79_72647381 ($_smarty_tpl) {
+$_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
 ?>
-
-el main principal es este
 <!DOCTYPE html>
 <html lang="es">
-    
+    <?php echo $_smarty_tpl->tpl_vars['contentheader']->value;?>
+
     <body>
 
         
@@ -42,7 +46,8 @@ el main principal es este
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar <?php echo $_smarty_tpl->tpl_vars['hola']->value;?>
+</button>
                     </div>
                   
                   </form>
@@ -72,10 +77,10 @@ el main principal es este
                     </div>
 
 
-       <?php echo '<?php'; ?>
- include('include/script.php'); <?php echo '?>'; ?>
+       include/scriptk.php
 
-         <script type="text/javascript">
+         <?php echo '<script'; ?>
+ type="text/javascript">
             $(document).ready(function (){
               $('.modal-trigger').leanModal();
 
@@ -155,7 +160,8 @@ el main principal es este
 
 
 
-        </script>
+        <?php echo '</script'; ?>
+>
 
        
 

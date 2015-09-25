@@ -1,0 +1,197 @@
+/**
+	proyect: Centro Médico
+	Author : Crusbel Lopez
+	Licence: GPL UCH GNU Licence
+
+*/
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+  font-family: 'Roboto';    
+}
+
+/****************************LoginPrincipal*****************************/
+.row.vLogin {
+    position: relative;
+}
+.modalLogin {
+    padding: 20px;
+    background-color: #454D6B;
+    color: #ffffff !important;
+    transform: translateY(20%);
+}
+
+.modalLogin img {
+    height: 70px;
+}
+.modalLogin .imgLogin {
+    text-align: center;
+}
+.modalLogin .input-field label {
+    color: #ffffff !important;
+
+}
+.modalLogin .divBoton {
+    text-align: center;
+    margin-top: 20px;
+}
+.modalLogin .divBoton button {
+    color: #ffffff !important;
+    background-color: #37AC9D;
+    padding: 15px;
+        border: none;
+        transition:0.7s;
+}
+.modalLogin .divBoton button:hover {
+    background-color: #FFFFFF;
+    color: #37AC9D !important;
+    transition:0.7s;
+}
+div#modalOlvideContra {
+    text-align: center;
+    color: #454D6B;
+}
+.divOlvideContra {
+    text-align: center;
+    margin-top: 20px;
+}
+.divOlvideContra a{
+    color: #ffffff;
+    transition:0.6s;
+}
+.divOlvideContra a:hover{
+    color: #32ACA5;
+    transition:0.6s;
+}
+.btnRecOlvContra button{
+    padding: 20px;
+    background-color: #32ACA5;
+    color: #ffffff;
+    margin-top: 15px !important;
+    transition:1s;
+    box-shadow: 2px 2px 2px #777777;
+    border: none;
+}
+.btnRecOlvContra button:hover{
+    background-color: #454D6B;
+    color: #ffffff;
+    transition:1s;
+}
+#modalOlvideContra input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #37AC9D !important;
+}
+label#emailLogin-error.error.active {
+    top: 75px;
+    right: 10px;
+    text-align: right;
+    color: #37AC9D !important;
+    font-size: 0.8em;
+}
+label#emailLogin-error.error {
+    top: 50px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.8em;
+    color: #37AC9D !important;
+}
+label#contraLogin-error.error.active {
+    top: 75px;
+    right: 10px;
+    text-align: right;
+    color: #37AC9D !important;
+    font-size: 0.8em;
+}
+label#contraLogin-error.error {
+    top: 50px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.8em;
+    color: #37AC9D !important;
+}
+label#correoOlvContra-error.error.active {
+    top: 75px;
+    right: 10px;
+    text-align: right;
+    color: #37AC9D !important;
+    font-size: 0.8em;
+}
+label#correoOlvContra-error.error {
+    top: 50px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.8em;
+    color: #37AC9D !important;
+}
+.sa-confirm-button-container button.confirm {
+    background-color: #454D6B !important;
+}
+
+
+.btnLogin:before {
+   content: '';
+   width: 0;
+   position: absolute;
+   height: 2px;
+   background: #33A5A0;
+   transition: 0.5s;
+   bottom: -2px;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.btnLogin:hover:before {
+  width: 100%;
+  
+}
+.modalLogin:before {
+    content: '';
+    border: 10px solid #454D6B;
+    -moz-transform: translateX(-50%);
+       left: -moz-calc(50% + 40px);
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    position: absolute;
+    margin: -40px;
+        box-shadow: 5px 5px 10px #888888;
+}
+/*******************************************************************/
+
+/*************seleccion y scrollbar*****************/
+
+/*user Select*/
+::selection {
+background: #32ACA5;
+color: #fff
+}
+::-moz-selection {
+background:  #32ACA5;
+color: #fff
+}
+/*Chrome Scroll*/
+::-webkit-scrollbar {
+    width: 15px;
+
+} 
+/* Track */
+::-webkit-scrollbar-track {   
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.04);
+} 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background:  #32ACA5;
+
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3); 
+  background: rgba(91, 46, 72, 0.6);
+}
+
+/*************************/
+

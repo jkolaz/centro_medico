@@ -21,7 +21,7 @@
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingrdesar</button>
                     </div>
                   
                   </form>
@@ -51,7 +51,7 @@
                     </div>
 
 
-       <?php include('include/script.php'); ?>
+       <?php include('include/scrfipt.php'); ?>
 
          <script type="text/javascript">
             $(document).ready(function (){
