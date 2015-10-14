@@ -2,20 +2,20 @@
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605bb52d8fbf2_16583825',
+  'unifunc' => 'content_561e6ffaadda65_68263203',
   'file_dependency' => 
   array (
     'ce1f3672182a611081c518485ebe2ea4547818f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\inc\\viewheader.tpl',
-      1 => 1443216085,
+      1 => 1444835026,
       2 => 'file',
     ),
   ),
   'cache_lifetime' => 3600,
 ),true);
-if ($_valid && !is_callable('content_5605bb52d8fbf2_16583825')) {
-function content_5605bb52d8fbf2_16583825 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_561e6ffaadda65_68263203')) {
+function content_561e6ffaadda65_68263203 ($_smarty_tpl) {
 ?>
 <head>
         <meta charset="utf-8">

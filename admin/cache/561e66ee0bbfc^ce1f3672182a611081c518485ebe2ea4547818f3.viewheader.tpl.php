@@ -1,31 +1,25 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 10:08:42
-         compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\inc\viewheader.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_561e6ffaaba5a6_90730746',
+  'unifunc' => 'content_561e66ee0d6cd8_62110138',
   'file_dependency' => 
   array (
     'ce1f3672182a611081c518485ebe2ea4547818f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\inc\\viewheader.tpl',
-      1 => 1444835026,
+      1 => 1443216085,
       2 => 'file',
     ),
   ),
-  'includes' => 
-  array (
-  ),
-),false);
-if ($_valid && !is_callable('content_561e6ffaaba5a6_90730746')) {
-function content_561e6ffaaba5a6_90730746 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11979561e6ffaa5c663_52715454';
+  'cache_lifetime' => 3600,
+),true);
+if ($_valid && !is_callable('content_561e66ee0d6cd8_62110138')) {
+function content_561e66ee0d6cd8_62110138 ($_smarty_tpl) {
 ?>
 <head>
         <meta charset="utf-8">
-        <title><?php echo $_smarty_tpl->tpl_vars['pg_title']->value;?>
-</title>
+        <title>Centro Odontologíco | Admin</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta http-equiv="Access-Control-Allow-Origin" content="*">

@@ -2,7 +2,7 @@
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605b8a489e8a6_11717271',
+  'unifunc' => 'content_561e66ee1c9043_42170641',
   'file_dependency' => 
   array (
     '9d0156780389cf807170434c0b9f706005f6cf4b' => 
@@ -14,12 +14,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'cache_lifetime' => 3600,
 ),true);
-if ($_valid && !is_callable('content_5605b8a489e8a6_11717271')) {
-function content_5605b8a489e8a6_11717271 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_561e66ee1c9043_42170641')) {
+function content_561e66ee1c9043_42170641 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-    
+    <head>
+        <meta charset="utf-8">
+        <title>Centro Odontologíco | Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta http-equiv="Access-Control-Allow-Origin" content="*">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="author" content="Dev'Studio">
+       
+
+        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
     <body>
 
         
@@ -40,7 +56,7 @@ function content_5605b8a489e8a6_11717271 ($_smarty_tpl) {
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar holaaaaaaaaaa</button>
                     </div>
                   
                   </form>
@@ -70,8 +86,7 @@ function content_5605b8a489e8a6_11717271 ($_smarty_tpl) {
                     </div>
 
 
-       <?php echo '<?php'; ?>
- include('include/script.php'); <?php echo '?>'; ?>
+       include/scriptk.php
 
          <script type="text/javascript">
             $(document).ready(function (){

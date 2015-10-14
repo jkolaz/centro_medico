@@ -51,7 +51,7 @@
                     </div>
 
 
-       <?php include('include/scrfipt.php'); ?>
+       <?php include('include/script.php'); ?>
 
          <script type="text/javascript">
             $(document).ready(function (){

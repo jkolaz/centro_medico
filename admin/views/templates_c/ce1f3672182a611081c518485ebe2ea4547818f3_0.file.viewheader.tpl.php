@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 10:08:42
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 10:24:24
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\inc\viewheader.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_561e6ffaaba5a6_90730746',
+  'unifunc' => 'content_561e73a846b2f7_04380135',
   'file_dependency' => 
   array (
     'ce1f3672182a611081c518485ebe2ea4547818f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\inc\\viewheader.tpl',
-      1 => 1444835026,
+      1 => 1444835671,
       2 => 'file',
     ),
   ),
@@ -18,9 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_561e6ffaaba5a6_90730746')) {
-function content_561e6ffaaba5a6_90730746 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '11979561e6ffaa5c663_52715454';
+if ($_valid && !is_callable('content_561e73a846b2f7_04380135')) {
+function content_561e73a846b2f7_04380135 ($_smarty_tpl) {
 ?>
 <head>
         <meta charset="utf-8">

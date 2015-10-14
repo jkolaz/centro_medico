@@ -1,3 +1,5 @@
-
-el main principal es este
-{$content_main}
+<!DOCTYPE html>
+<html lang="es">
+    {$contentheader}
+    {$content_main}
+</html>

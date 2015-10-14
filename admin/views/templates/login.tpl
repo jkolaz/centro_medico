@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-    {$contentheader}
+
     <body>
 
         
           <div class="row vLogin">
             <div class="col offset-l4 l4 offset-m2 m8 s12">
               <div class="row modalLogin">
-                <form class="col s12 l12 m12" id="formularioLogin" method="post" name="formularioLogin">
+                  <form class="col s12 l12 m12" id="formularioLogin" method="post" action="{$base_url}index.php/admin/administrator" name="formularioLogin">
                     <div class="col l12 m12 s12 imgLogin">
                       <img src="img/logo-vmc.svg">
                     </div>
@@ -21,7 +19,7 @@
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar {$hola}</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
                     </div>
                   
                   </form>
@@ -51,7 +49,7 @@
                     </div>
 
 
-       include/scriptk.php
+        {$include_script1}
 
          <script type="text/javascript">
             $(document).ready(function (){
@@ -90,18 +88,18 @@
               $('#formularioOlvideC').validate({
 
                 rules:{
-                  correoOlvContra:{
-                    required:true,
-                    minlength: 2, 
-                    maxlength: 50,
-                    email: true
-                  }
+                    correoOlvContra:{
+                        required:true,
+                        minlength: 2, 
+                        maxlength: 50,
+                        email: true
+                    }
                 },
                 messages:{
-                  correoOlvContra: {
-                    required:'El campo es requerido',
-                    email:'Ingrese un correo valido'
-                  }
+                    correoOlvContra: {
+                      required:'El campo es requerido',
+                      email:'Ingrese un correo valido'
+                    }
                 }
 
 
@@ -112,14 +110,23 @@
             });
 
             $('#btnIngresarLogin').on("click",function(evt){
-              evt.preventDefault();
-              var correo = 'admin@admin';
-              var contra = 'admin';
-              if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-                $.mensajeUsuBienvenido();
-              }else{
-                $.mensajeUsuIncorrecto();
-              }
+                evt.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    cache: false,
+                    data: { user: $('#emailLogin').val(), password:$('#contraLogin').val() },
+                    url: $('#formularioLogin').attr('action'),
+                });
+                //$('#formularioLogin').submit();
+                /*
+                var correo = 'admin@admin.com';
+                var contra = 'admin';
+                if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
+                  $.mensajeUsuBienvenido();
+                }else{
+                  $.mensajeUsuIncorrecto();
+                }
+                */
             });
             
 
@@ -138,4 +145,3 @@
        
 
     </body>
-</html>

@@ -20,14 +20,8 @@ class Index extends CI_Controller{
     
     public function index(){
         $this->load->library( 'Smartyci' );
-        //$this->smartyci->useCached( 'index.tpl' );
-        //$this->smartyci->maintpl = "mainClear";
-        $this->smartyci->include_template('contentheader', 'inc/viewheader', uniqid());
-//        $html = $this->smartyci->fetch("inc/viewheader.tpl");
-//        $this->smartyci->assign('contentheader', $html);
-        echo "onl";
-        $this->smartyci->assign('hola', "holaaaaaaaaaa");
-        $this->smartyci->maintpl = "mainClear";
-        $this->smartyci->show_page('login.tpl');
+        $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
+        $this->smartyci->assign("base_url", $this->smartyci->base_url);
+        $this->smartyci->show_page('login.tpl',  uniqid());
     }
 }

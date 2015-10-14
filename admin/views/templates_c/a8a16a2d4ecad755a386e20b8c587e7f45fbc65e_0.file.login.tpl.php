@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-09-25 16:52:36
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 17:27:36
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5605c224a42d79_72647381',
+  'unifunc' => 'content_561ed6d8574cb2_69852303',
   'file_dependency' => 
   array (
     'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
-      1 => 1443217940,
+      1 => 1444857894,
       2 => 'file',
     ),
   ),
@@ -18,13 +18,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5605c224a42d79_72647381')) {
-function content_5605c224a42d79_72647381 ($_smarty_tpl) {
-$_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
+if ($_valid && !is_callable('content_561ed6d8574cb2_69852303')) {
+function content_561ed6d8574cb2_69852303 ($_smarty_tpl) {
 ?>
-<!DOCTYPE html>
-<html lang="es">
-    <?php echo $_smarty_tpl->tpl_vars['contentheader']->value;?>
 
     <body>
 
@@ -32,7 +28,8 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
           <div class="row vLogin">
             <div class="col offset-l4 l4 offset-m2 m8 s12">
               <div class="row modalLogin">
-                <form class="col s12 l12 m12" id="formularioLogin" method="post" name="formularioLogin">
+                  <form class="col s12 l12 m12" id="formularioLogin" method="post" action="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+index.php/admin/administrator" name="formularioLogin">
                     <div class="col l12 m12 s12 imgLogin">
                       <img src="img/logo-vmc.svg">
                     </div>
@@ -46,8 +43,7 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
                       <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar <?php echo $_smarty_tpl->tpl_vars['hola']->value;?>
-</button>
+                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
                     </div>
                   
                   </form>
@@ -77,7 +73,8 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
                     </div>
 
 
-       include/scriptk.php
+        <?php echo $_smarty_tpl->tpl_vars['include_script1']->value;?>
+
 
          <?php echo '<script'; ?>
  type="text/javascript">
@@ -117,18 +114,18 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
               $('#formularioOlvideC').validate({
 
                 rules:{
-                  correoOlvContra:{
-                    required:true,
-                    minlength: 2, 
-                    maxlength: 50,
-                    email: true
-                  }
+                    correoOlvContra:{
+                        required:true,
+                        minlength: 2, 
+                        maxlength: 50,
+                        email: true
+                    }
                 },
                 messages:{
-                  correoOlvContra: {
-                    required:'El campo es requerido',
-                    email:'Ingrese un correo valido'
-                  }
+                    correoOlvContra: {
+                      required:'El campo es requerido',
+                      email:'Ingrese un correo valido'
+                    }
                 }
 
 
@@ -139,14 +136,23 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
             });
 
             $('#btnIngresarLogin').on("click",function(evt){
-              evt.preventDefault();
-              var correo = 'admin@admin';
-              var contra = 'admin';
-              if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-                $.mensajeUsuBienvenido();
-              }else{
-                $.mensajeUsuIncorrecto();
-              }
+                evt.preventDefault();
+                $.ajax({
+                    type: "POST",
+                    cache: false,
+                    data: { user: $('#emailLogin').val(), password:$('#contraLogin').val() },
+                    url: $('#formularioLogin').attr('action'),
+                });
+                //$('#formularioLogin').submit();
+                /*
+                var correo = 'admin@admin.com';
+                var contra = 'admin';
+                if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
+                  $.mensajeUsuBienvenido();
+                }else{
+                  $.mensajeUsuIncorrecto();
+                }
+                */
             });
             
 
@@ -166,5 +172,5 @@ $_smarty_tpl->compiled->nocache_hash = '98245605c224a07d71_88721225';
        
 
     </body>
-</html><?php }
+<?php }
 }

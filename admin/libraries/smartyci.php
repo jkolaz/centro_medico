@@ -19,20 +19,23 @@ require_once( 'admin/third_party/smarty/libs/Smarty.class.php' );
 class Smartyci extends Smarty{
     //put your code here
     var $maintpl = "main";
-    var $pg_title = "Centro Odontologíco | Admin";
+    var $pg_title = "Odontología Integral S&S | Admin";
     var $si_ajax;
+    var $base_url;
     
     public function __construct(){
         parent::__construct();
-
+        
         $config =& get_config();
-        $this->caching = 1;
+        $this->caching = 0;
         $this->si_ajax = false;
         $config['application_dir'] = APPPATH;
         $this->setTemplateDir( $config['application_dir'] . 'views/templates' );
         $this->setCompileDir( $config['application_dir'] . 'views/templates_c' );
         $this->setConfigDir( $config['application_dir'] . 'third_party/Smarty/configs' );
         $this->setCacheDir( $config['application_dir'] . 'cache' );
+        $this->base_url = $config['base_url'];
+        
         $this->assign("pg_title", $this->pg_title);
         
         //$this->display_web();
@@ -59,7 +62,7 @@ class Smartyci extends Smarty{
 
             $this->resp_json($page_html);
         } else {
-            //$this->include_template("contentheader", "inc/viewheader", $cache_id);
+            $this->include_template("contentheader", "inc/viewheader", $cache_id);
             $html = $this->fetch($page_html, $cache_id);
             $this->assign("content_main", $html);
             $this->display($this->maintpl . '.tpl');
