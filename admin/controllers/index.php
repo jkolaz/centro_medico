@@ -19,9 +19,13 @@ class Index extends CI_Controller{
     }
     
     public function index(){
+        $this->login();
+    }
+    public function login(){
         $this->load->library( 'Smartyci' );
-        $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
         $this->smartyci->assign("base_url", $this->smartyci->base_url);
+        $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
+        
         $this->smartyci->show_page('login.tpl',  uniqid());
     }
 }

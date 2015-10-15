@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 10:24:24
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-15 17:48:21
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\inc\viewheader.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_561e73a846b2f7_04380135',
+  'unifunc' => 'content_56202d3546b166_40190819',
   'file_dependency' => 
   array (
     'ce1f3672182a611081c518485ebe2ea4547818f3' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\inc\\viewheader.tpl',
-      1 => 1444835671,
+      1 => 1444949280,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_561e73a846b2f7_04380135')) {
-function content_561e73a846b2f7_04380135 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56202d3546b166_40190819')) {
+function content_56202d3546b166_40190819 ($_smarty_tpl) {
 ?>
 <head>
         <meta charset="utf-8">
@@ -32,11 +32,15 @@ function content_561e73a846b2f7_04380135 ($_smarty_tpl) {
         <meta name="author" content="Dev'Studio">
        
 
-        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['DIR_PRINCIPAL']->value;?>
+css/materialize.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <link type="text/css" rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['DIR_PRINCIPAL']->value;?>
+css/font-awesome.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['DIR_PRINCIPAL']->value;?>
+css/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['DIR_PRINCIPAL']->value;?>
+css/estilos.css">
 </head><?php }
 }

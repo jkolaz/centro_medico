@@ -8,10 +8,10 @@
         <meta name="author" content="Dev'Studio">
        
 
-        <link rel="stylesheet" type="text/css" href="css/materialize.css">
+        <link rel="stylesheet" type="text/css" href="{$DIR_PRINCIPAL}css/materialize.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-        <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css"  media="screen,projection"/>
-        <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
-        <link rel="stylesheet" type="text/css" href="css/estilos.css">
+        <link type="text/css" rel="stylesheet" href="{$DIR_PRINCIPAL}css/font-awesome.min.css"  media="screen,projection"/>
+        <link rel="stylesheet" type="text/css" href="{$DIR_PRINCIPAL}css/sweetalert.css">
+        <link rel="stylesheet" type="text/css" href="{$DIR_PRINCIPAL}css/estilos.css">
 </head>

@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-14 17:27:36
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-15 17:58:44
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_561ed6d8574cb2_69852303',
+  'unifunc' => 'content_56202fa41897a7_94253073',
   'file_dependency' => 
   array (
     'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
-      1 => 1444857894,
+      1 => 1444949564,
       2 => 'file',
     ),
   ),
@@ -18,59 +18,55 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_561ed6d8574cb2_69852303')) {
-function content_561ed6d8574cb2_69852303 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56202fa41897a7_94253073')) {
+function content_56202fa41897a7_94253073 ($_smarty_tpl) {
 ?>
-
-    <body>
-
-        
-          <div class="row vLogin">
-            <div class="col offset-l4 l4 offset-m2 m8 s12">
-              <div class="row modalLogin">
-                  <form class="col s12 l12 m12" id="formularioLogin" method="post" action="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+<body>
+    <div class="row vLogin">
+        <div class="col offset-l4 l4 offset-m2 m8 s12">
+            <div class="row modalLogin">
+                <form class="col s12 l12 m12" id="formularioLogin" method="post" action="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 index.php/admin/administrator" name="formularioLogin">
                     <div class="col l12 m12 s12 imgLogin">
-                      <img src="img/logo-vmc.svg">
+                        <img src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+img/logo-vmc.svg">
                     </div>
                     <div class="input-field col s12 l12 m12 divCorreo">
-                      <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin">
-                      <label for="emailLogin">Correo Electrónico</label>
+                        <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin">
+                        <label for="emailLogin">Correo Electrónico</label>
                     </div>
-
                     <div class="input-field col s12 m12 l12 divContra">
-                      <input id="contraLogin" name="contraLogin" type="password" class="validate ccontraLogin">
-                      <label for="contraLogn">Contraseña</label>
+                        <input id="contraLogin" name="contraLogin" type="password" class="validate ccontraLogin">
+                        <label for="contraLogn">Contraseña</label>
                     </div>
                     <div class="col l12 m12 s12 divBoton">
-                      <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
+                        <button type="submit" class="waves-effect" id="btnIngresarLogin" name="btnIngresarLogin">Ingresar</button>
                     </div>
-                  
-                  </form>
-                    <div class="col l12 m12 s12 divOlvideContra">
-                      <a href="#modalOlvideContra" class="modal-trigger waves-effect">¿Olvidaste tu contraseña?</a>
+                </form>
+                <div class="col l12 m12 s12 divOlvideContra">
+                    <a href="#modalOlvideContra" class="modal-trigger waves-effect">¿Olvidaste tu contraseña?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalOlvideContra" class="modal">
+        <div class="modal-content">
+            <div class="col l12 m12 s12">
+                <h4>¿Olvidaste tu contraseña?</h4>
+                <p>Ingresa tu correo para recibir un enlace y crear tu nueva contraseña</p>
+                <form method="post" id="formularioOlvideC" name="formularioOlvideC">
+                    <div class="input-field col l12 m12 s12">
+                        <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra">
+                        <label for="correoOlvContra">Correo</label>                            
                     </div>
-                  </div>
-              </div>
-          </div>
-          <div id="modalOlvideContra" class="modal">
-                      <div class="modal-content">
-                        <div class="col l12 m12 s12">
-                          <h4>¿Olvidaste tu contraseña?</h4>
-                          <p>Ingresa tu correo para recibir un enlace y crear tu nueva contraseña</p>
-                          <form method="post" id="formularioOlvideC" name="formularioOlvideC">
-                          <div class="input-field col l12 m12 s12">
-                            <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra">
-                            <label for="correoOlvContra">Correo</label>                            
-                          </div>
-                          <div class="col l12 m12 s12 btnRecOlvContra">
-                            <button type="submit" class="waves-effect" id="btnOlvContra" name="btnOlvContra">Recuperar</button>
-                          </div>
-                          </form>
-                          
-                        </div>
-                      </div>
+                    <div class="col l12 m12 s12 btnRecOlvContra">
+                        <button type="submit" class="waves-effect" id="btnOlvContra" name="btnOlvContra">Recuperar</button>
                     </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 
 
         <?php echo $_smarty_tpl->tpl_vars['include_script1']->value;?>
@@ -85,27 +81,27 @@ index.php/admin/administrator" name="formularioLogin">
               $('#formularioLogin').validate({
 
                 rules:{
-                  emailLogin:{
-                    required:true,
-                    minlength: 2, 
-                    maxlength: 50,
-                    email: true
-                  },
-                  contraLogin:{
-                    required:true,
-                    minlength: 2, 
-                    maxlength: 50
-                  }
+                    emailLogin:{
+                        required:true,
+                        minlength: 2, 
+                        maxlength: 50,
+                        email: true
+                    },
+                    contraLogin:{
+                        required:true,
+                        minlength: 2, 
+                        maxlength: 50
+                    }
                 },
                 messages:{
-                  emailLogin: {
-                    required:'El campo es requerido',
-                    email:'Ingrese un correo valido'
-                  },
-                  contraLogin:{
-                    required:'El campo es requerido',
-                    minlength:'Minimo 2 caracteres'
-                  }
+                    emailLogin: {
+                        required:'El campo es requerido',
+                        email:'Ingrese un correo valido'
+                    },
+                    contraLogin:{
+                        required:'El campo es requerido',
+                        minlength:'Minimo 2 caracteres'
+                    }
                 }
 
 
@@ -137,13 +133,8 @@ index.php/admin/administrator" name="formularioLogin">
 
             $('#btnIngresarLogin').on("click",function(evt){
                 evt.preventDefault();
-                $.ajax({
-                    type: "POST",
-                    cache: false,
-                    data: { user: $('#emailLogin').val(), password:$('#contraLogin').val() },
-                    url: $('#formularioLogin').attr('action'),
-                });
-                //$('#formularioLogin').submit();
+                
+                $('#formularioLogin').submit();
                 /*
                 var correo = 'admin@admin.com';
                 var contra = 'admin';

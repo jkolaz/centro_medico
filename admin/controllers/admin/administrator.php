@@ -15,9 +15,23 @@ class administrator extends CI_Controller{
     //put your code here
     public function __construct() {
         parent::__construct();
+        $this->load->model('admin/administrador_model', 'ADMINISTRADOR');
     }
     
     public function index(){
-        echo "hola";
+        $correo     = $this->input->post('emailLogin', TRUE);
+        $password   = $this->input->post('contraLogin', TRUE);
+        
+        $objUsuario = $this->ADMINISTRADOR->validateUsuario($correo, $password);
+        
+        if($objUsuario){
+            if(is_array($objUsuario) && $correo == $objUsuario[0]->adm_correo && md5($password) == $objUsuario[0]->adm_clave){
+                redirect('principal');
+            }else{
+                redirect();
+            }
+        }else{
+            redirect('index/login');
+        }
     }
 }

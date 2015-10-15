@@ -62,6 +62,7 @@ class Smartyci extends Smarty{
 
             $this->resp_json($page_html);
         } else {
+            $this->assign("DIR_PRINCIPAL", $this->base_url);
             $this->include_template("contentheader", "inc/viewheader", $cache_id);
             $html = $this->fetch($page_html, $cache_id);
             $this->assign("content_main", $html);
