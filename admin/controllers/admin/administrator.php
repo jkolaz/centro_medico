@@ -23,15 +23,28 @@ class administrator extends CI_Controller{
         $password   = $this->input->post('contraLogin', TRUE);
         
         $objUsuario = $this->ADMINISTRADOR->validateUsuario($correo, $password);
-        
+        $input = array();
+        $input['correo'] = $correo;
+        $input['password'] = $password;
         if($objUsuario){
             if(is_array($objUsuario) && $correo == $objUsuario[0]->adm_correo && md5($password) == $objUsuario[0]->adm_clave){
+                $arreglo = array();
+                $arreglo['user'] = $objUsuario[0]->adm_id;
+                $arreglo['usuario'] = $objUsuario[0]->adm_usuario;
+                $arreglo['correo'] = $objUsuario[0]->adm_correo;
+                $arreglo['nombre'] = $objUsuario[0]->adm_nombre;
+                $arreglo['apellido'] = $objUsuario[0]->adm_apellido;
+                $arreglo['cambio_clave'] = $objUsuario[0]->adm_fecha_cambio_clave;
+                $arreglo['tipo'] = $objUsuario[0]->adm_ta_id;
+                $this->session->set_userdata($arreglo); 
                 redirect('principal');
             }else{
-                redirect();
+                $this->session->set_userdata($input); 
+                redirect('index/login/1');
             }
         }else{
-            redirect('index/login');
+            $this->session->set_userdata($input); 
+            redirect('index/login/1');
         }
     }
 }

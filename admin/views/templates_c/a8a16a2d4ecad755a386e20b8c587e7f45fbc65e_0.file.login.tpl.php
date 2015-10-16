@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-15 17:58:44
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-16 15:31:45
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_56202fa41897a7_94253073',
+  'unifunc' => 'content_56215eb115e0c1_96837268',
   'file_dependency' => 
   array (
     'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
-      1 => 1444949564,
+      1 => 1445027403,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_56202fa41897a7_94253073')) {
-function content_56202fa41897a7_94253073 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56215eb115e0c1_96837268')) {
+function content_56215eb115e0c1_96837268 ($_smarty_tpl) {
 ?>
 <body>
     <div class="row vLogin">
@@ -69,16 +69,17 @@ img/logo-vmc.svg">
     </div>
 
 
-        <?php echo $_smarty_tpl->tpl_vars['include_script1']->value;?>
+    <?php echo $_smarty_tpl->tpl_vars['include_script1']->value;?>
 
 
-         <?php echo '<script'; ?>
+    <?php echo '<script'; ?>
  type="text/javascript">
-            $(document).ready(function (){
-              $('.modal-trigger').leanModal();
+        $(document).ready(function (){
+            $('.modal-trigger').leanModal();
+            <?php echo $_smarty_tpl->tpl_vars['js_error']->value;?>
 
 
-              $('#formularioLogin').validate({
+            $('#formularioLogin').validate({
 
                 rules:{
                     emailLogin:{
@@ -103,12 +104,9 @@ img/logo-vmc.svg">
                         minlength:'Minimo 2 caracteres'
                     }
                 }
+            });
 
-
-              });
-
-              $('#formularioOlvideC').validate({
-
+            $('#formularioOlvideC').validate({
                 rules:{
                     correoOlvContra:{
                         required:true,
@@ -119,49 +117,41 @@ img/logo-vmc.svg">
                 },
                 messages:{
                     correoOlvContra: {
-                      required:'El campo es requerido',
-                      email:'Ingrese un correo valido'
+                        required:'El campo es requerido',
+                        email:'Ingrese un correo valido'
                     }
                 }
-
-
-              });
+            });
 
               
 
-            });
+        });
 
-            $('#btnIngresarLogin').on("click",function(evt){
-                evt.preventDefault();
-                
-                $('#formularioLogin').submit();
-                /*
-                var correo = 'admin@admin.com';
-                var contra = 'admin';
-                if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-                  $.mensajeUsuBienvenido();
-                }else{
-                  $.mensajeUsuIncorrecto();
-                }
-                */
-            });
+        $('#btnIngresarLogin').on("click",function(evt){
+            evt.preventDefault();
+
+            $('#formularioLogin').submit();
+            /*
+            var correo = 'admin@admin.com';
+            var contra = 'admin';
+            if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
+              $.mensajeUsuBienvenido();
+            }else{
+              $.mensajeUsuIncorrecto();
+            }
+            */
+        });
             
 
-            $.mensajeUsuBienvenido = function(){
-              swal("VMC Subastas", "Bienvenido", "success");
-            }
+        $.mensajeUsuBienvenido = function(){
+            swal("VMC Subastas", "Bienvenido", "success");
+        }
 
-            $.mensajeUsuIncorrecto = function(){
-              swal("Algo anda mal!", "El usuario y/o contraseña son incorrectos", "error");
-            }
-
-
-
-        <?php echo '</script'; ?>
+        $.mensajeUsuIncorrecto = function(){
+            swal("Algo anda mal!", "El usuario y/o contraseña son incorrectos", "error");
+        }
+    <?php echo '</script'; ?>
 >
-
-       
-
-    </body>
+</body>
 <?php }
 }

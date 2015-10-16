@@ -21,9 +21,14 @@ class Index extends CI_Controller{
     public function index(){
         $this->login();
     }
-    public function login(){
+    public function login($error = 0){
         $this->load->library( 'Smartyci' );
         $this->smartyci->assign("base_url", $this->smartyci->base_url);
+        if($error == 1){
+            $this->smartyci->assign("js_error", '$.mensajeUsuIncorrecto();');
+        }else{
+            $this->smartyci->assign("js_error", '');
+        }
         $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
         
         $this->smartyci->show_page('login.tpl',  uniqid());

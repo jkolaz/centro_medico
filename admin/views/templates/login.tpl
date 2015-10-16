@@ -7,7 +7,7 @@
                         <img src="{$base_url}img/logo-vmc.svg">
                     </div>
                     <div class="input-field col s12 l12 m12 divCorreo">
-                        <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin">
+                        <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin" autocomplete="off">
                         <label for="emailLogin">Correo Electrónico</label>
                     </div>
                     <div class="input-field col s12 m12 l12 divContra">
@@ -29,9 +29,9 @@
             <div class="col l12 m12 s12">
                 <h4>¿Olvidaste tu contraseña?</h4>
                 <p>Ingresa tu correo para recibir un enlace y crear tu nueva contraseña</p>
-                <form method="post" id="formularioOlvideC" name="formularioOlvideC">
+                <form method="post" id="formularioOlvideC" name="formularioOlvideC" action="{$base_url}index.php/admin/administrator">
                     <div class="input-field col l12 m12 s12">
-                        <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra">
+                        <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra" autocomplete="off">
                         <label for="correoOlvContra">Correo</label>                            
                     </div>
                     <div class="col l12 m12 s12 btnRecOlvContra">
@@ -44,14 +44,14 @@
     </div>
 
 
-        {$include_script1}
+    {$include_script1}
 
-         <script type="text/javascript">
-            $(document).ready(function (){
-              $('.modal-trigger').leanModal();
+    <script type="text/javascript">
+        $(document).ready(function (){
+            $('.modal-trigger').leanModal();
+            {$js_error}
 
-
-              $('#formularioLogin').validate({
+            $('#formularioLogin').validate({
 
                 rules:{
                     emailLogin:{
@@ -76,12 +76,9 @@
                         minlength:'Minimo 2 caracteres'
                     }
                 }
+            });
 
-
-              });
-
-              $('#formularioOlvideC').validate({
-
+            $('#formularioOlvideC').validate({
                 rules:{
                     correoOlvContra:{
                         required:true,
@@ -92,46 +89,38 @@
                 },
                 messages:{
                     correoOlvContra: {
-                      required:'El campo es requerido',
-                      email:'Ingrese un correo valido'
+                        required:'El campo es requerido',
+                        email:'Ingrese un correo valido'
                     }
                 }
-
-
-              });
+            });
 
               
 
-            });
+        });
 
-            $('#btnIngresarLogin').on("click",function(evt){
-                evt.preventDefault();
-                
-                $('#formularioLogin').submit();
-                /*
-                var correo = 'admin@admin.com';
-                var contra = 'admin';
-                if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-                  $.mensajeUsuBienvenido();
-                }else{
-                  $.mensajeUsuIncorrecto();
-                }
-                */
-            });
+        $('#btnIngresarLogin').on("click",function(evt){
+            evt.preventDefault();
+
+            $('#formularioLogin').submit();
+            /*
+            var correo = 'admin@admin.com';
+            var contra = 'admin';
+            if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
+              $.mensajeUsuBienvenido();
+            }else{
+              $.mensajeUsuIncorrecto();
+            }
+            */
+        });
             
 
-            $.mensajeUsuBienvenido = function(){
-              swal("VMC Subastas", "Bienvenido", "success");
-            }
+        $.mensajeUsuBienvenido = function(){
+            swal("VMC Subastas", "Bienvenido", "success");
+        }
 
-            $.mensajeUsuIncorrecto = function(){
-              swal("Algo anda mal!", "El usuario y/o contraseña son incorrectos", "error");
-            }
-
-
-
-        </script>
-
-       
-
-    </body>
+        $.mensajeUsuIncorrecto = function(){
+            swal("Algo anda mal!", "El usuario y/o contraseña son incorrectos", "error");
+        }
+    </script>
+</body>

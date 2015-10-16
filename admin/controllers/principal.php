@@ -18,6 +18,11 @@ class Principal extends CI_Controller{
     }
     
     public function index(){
-        echo "felicitaciones llegó bien hasta aquí :)";
+        if($this->session->userdata('user')!=NULL && $this->session->userdata('user') > 0){
+            imprimir($this->session->userdata);
+            echo "felicitaciones llegó bien hasta aquí :)";
+        }else{
+            redirect('index');
+        }
     }
 }
