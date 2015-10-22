@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-16 15:31:45
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-22 11:48:45
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_56215eb115e0c1_96837268',
+  'unifunc' => 'content_5629136d5dcbb3_32480123',
   'file_dependency' => 
   array (
     'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
-      1 => 1445027403,
+      1 => 1445531962,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_56215eb115e0c1_96837268')) {
-function content_56215eb115e0c1_96837268 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5629136d5dcbb3_32480123')) {
+function content_5629136d5dcbb3_32480123 ($_smarty_tpl) {
 ?>
 <body>
     <div class="row vLogin">
@@ -32,7 +32,7 @@ index.php/admin/administrator" name="formularioLogin">
 img/logo-vmc.svg">
                     </div>
                     <div class="input-field col s12 l12 m12 divCorreo">
-                        <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin">
+                        <input id="emailLogin" name="emailLogin" type="email" class="validate cemailLogin" autocomplete="off">
                         <label for="emailLogin">Correo Electrónico</label>
                     </div>
                     <div class="input-field col s12 m12 l12 divContra">
@@ -54,9 +54,10 @@ img/logo-vmc.svg">
             <div class="col l12 m12 s12">
                 <h4>¿Olvidaste tu contraseña?</h4>
                 <p>Ingresa tu correo para recibir un enlace y crear tu nueva contraseña</p>
-                <form method="post" id="formularioOlvideC" name="formularioOlvideC">
+                <form method="post" id="formularioOlvideC" name="formularioOlvideC" action="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+index.php/admin/administrator/olvideClave">
                     <div class="input-field col l12 m12 s12">
-                        <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra">
+                        <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra" autocomplete="off">
                         <label for="correoOlvContra">Correo</label>                            
                     </div>
                     <div class="col l12 m12 s12 btnRecOlvContra">
@@ -141,6 +142,11 @@ img/logo-vmc.svg">
             }
             */
         });
+        
+        $('#btnOlvContra').on("click", function(evt){
+            evt.preventDefault();
+            $("#formularioOlvideC").submit();
+        })
             
 
         $.mensajeUsuBienvenido = function(){

@@ -29,7 +29,7 @@
             <div class="col l12 m12 s12">
                 <h4>¿Olvidaste tu contraseña?</h4>
                 <p>Ingresa tu correo para recibir un enlace y crear tu nueva contraseña</p>
-                <form method="post" id="formularioOlvideC" name="formularioOlvideC" action="{$base_url}index.php/admin/administrator">
+                <form method="post" id="formularioOlvideC" name="formularioOlvideC" action="{$base_url}index.php/admin/administrator/olvideClave">
                     <div class="input-field col l12 m12 s12">
                         <input type="email" class="validate" id="correoOlvContra" name="correoOlvContra" autocomplete="off">
                         <label for="correoOlvContra">Correo</label>                            
@@ -113,6 +113,11 @@
             }
             */
         });
+        
+        $('#btnOlvContra').on("click", function(evt){
+            evt.preventDefault();
+            $("#formularioOlvideC").submit();
+        })
             
 
         $.mensajeUsuBienvenido = function(){

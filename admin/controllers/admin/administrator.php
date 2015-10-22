@@ -47,4 +47,41 @@ class administrator extends CI_Controller{
             redirect('index/login/1');
         }
     }
+    
+    public function olvideClave(){
+        $correo = $this->input->post('correoOlvContra', TRUE);
+        imprimir($correo);
+        $objUsuario = $this->ADMINISTRADOR->getAdministratorByEmail($correo);
+        
+        if($objUsuario && $objUsuario[0]->adm_id > 0){
+            $id = $objUsuario[0]->adm_id;
+            $reply = $correo;
+            $this->ADMINISTRADOR->generateClaveReset($id);
+            
+            $mail = new My_PHPMailer();
+            
+            $mail->IsSMTP();
+            $mail->SMTPAuth = true;
+            
+            $mail->Host       = "mail.jkolaz.com";                // establecemos el puerto SMTP en el servidor de GMail
+            $mail->Username   = "j.salsavilca@jkolaz.com";  // la cuenta de correo GMail
+            $mail->Password   = "10557788177428";            // password de la cuenta GMail
+                        
+            $mail->From = "info@jkolaz.com";
+            $mail->FromName = "CENTRO MEDICO";
+            $mail->AddReplyTo($reply);
+            $mail->Subject    = "Correo de pruebadd";  //Asunto del mensaje
+            $mail->Body      = "Cuerpo en HTML<br />";
+            $mail->AltBody    = "Correo de prueba";
+            $destino = "j.salsavilca@gmail.com";
+            $mail->AddAddress($destino, "Juan Palotes");
+            
+            $rs_mail = $mail->Send();
+            if (!$rs_mail) {
+                imprimir($mail->ErrorInfo); 
+                exit;
+            }
+        }
+        imprimir($objUsuario);
+    }
 }
