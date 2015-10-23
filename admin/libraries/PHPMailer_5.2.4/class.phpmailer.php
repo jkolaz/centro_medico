@@ -87,7 +87,7 @@ class PHPMailer {
    * Sets the From name of the message.
    * @var string
    */
-  public $FromName          = 'Centro medico';
+  public $FromName          = 'Centro Medico';
 
   /**
    * Sets the Sender email (Return-Path) of the message.  If not empty,
@@ -245,7 +245,7 @@ class PHPMailer {
    * Sets SMTP authentication. Utilizes the Username and Password variables.
    * @var bool
    */
-  public $SMTPAuth      = false;
+  public $SMTPAuth      = TRUE;
 
   /**
    * Sets SMTP username.

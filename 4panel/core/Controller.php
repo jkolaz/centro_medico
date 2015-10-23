@@ -58,6 +58,26 @@ class CI_Controller {
 	{
 		return self::$instance;
 	}
+        
+        public function senMailNew($subject, $destino, $cuerpo, $reply = "", $from_name = "", $nombre_usuario=""){
+            $mail = new My_PHPMailer();
+            $mail->IsSMTP();
+            if($from_name != ""){
+                $mail->FromName = $from_name;
+            }
+            
+            $mail->AddReplyTo($reply);
+            $mail->Subject    = $subject;  //Asunto del mensaje
+            $mail->Body      = $cuerpo;
+            $mail->AltBody    = $subject;
+            $mail->AddAddress($destino, $nombre_usuario);
+            
+            $rs_mail = $mail->Send();
+            if (!$rs_mail) {
+                imprimir($mail->ErrorInfo); 
+                exit;
+            }
+        }
 }
 // END Controller class
 
