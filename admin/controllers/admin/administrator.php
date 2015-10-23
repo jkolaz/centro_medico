@@ -58,21 +58,24 @@ class administrator extends CI_Controller{
             $id = $objUsuario[0]->adm_id;
             $reply = "jash_08_91@hotmail.com";
             $this->ADMINISTRADOR->generateClaveReset($id);
+            $obUser = $this->ADMINISTRADOR->getAdministratorById($id);
             
+            $cuerpo = "<p><b>USUARIO :</b>".$obUser[0]->adm_usuario."</p>";
+            $cuerpo .= "<p><b>NOMBRES Y APELLIDOS :</b>".$obUser[0]->adm_nombre." ".$obUser[0]->adm_apellido."</p>";
+            $cuerpo .= "<p><b>URL :</b>".  base_url()."index.php/admin/administrator/cambiarclave/".$obUser[0]->adm_clave_reset."</p>";
             $mail = new My_PHPMailer();
-            
             $mail->IsSMTP();
-//            $mail->SMTPAuth = true;
+            $mail->SMTPAuth = true;
             
 //            $mail->Host       = "mail.jkolaz.com";                // establecemos el puerto SMTP en el servidor de GMail
 //            $mail->Username   = "j.salsavilca@jkolaz.com";  // la cuenta de correo GMail
 //            $mail->Password   = "10557788177428";            // password de la cuenta GMail
                         
-            $mail->From = "info@jkolaz.com";
+            //$mail->From = "info@jkolaz.com";
             $mail->FromName = "CENTRO MEDICO";
             $mail->AddReplyTo($reply);
-            $mail->Subject    = "Correo de pruebadd";  //Asunto del mensaje
-            $mail->Body      = "Cuerpo en HTML<br />";
+            $mail->Subject    = "Olvide contraseña";  //Asunto del mensaje
+            $mail->Body      = $cuerpo;
             $mail->AltBody    = "Correo de prueba";
             $destino = $correo;
             $mail->AddAddress($destino, $nombre_usuario);
