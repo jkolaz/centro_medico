@@ -24,11 +24,20 @@ class Index extends CI_Controller{
     public function login($error = 0){
         $this->load->library( 'Smartyci' );
         $this->smartyci->assign("base_url", $this->smartyci->base_url);
-        if($error == 1){
-            $this->smartyci->assign("js_error", '$.mensajeUsuIncorrecto();');
-        }else{
-            $this->smartyci->assign("js_error", '');
+        $js_error = "";
+        switch ($error){
+            case 1:
+                $js_error = '$.mensajeUsuIncorrecto();';
+                break;
+            case 2:
+                if($this->session->userdata('imprimir') == 1){
+                    $js_error = '$.mensajeUsuSendMail();';
+                }
+                $imprimir['imprimir'] = 0;
+                $this->session->unset_userdata($imprimir); 
+                break;
         }
+        $this->smartyci->assign("js_error", $js_error);
         $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
         
         $this->smartyci->show_page('login.tpl',  uniqid());

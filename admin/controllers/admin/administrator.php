@@ -50,7 +50,6 @@ class administrator extends CI_Controller{
     
     public function olvideClave(){
         $correo = $this->input->post('correoOlvContra', TRUE);
-        imprimir($correo);
         $objUsuario = $this->ADMINISTRADOR->getAdministratorByEmail($correo);
         
         if($objUsuario && $objUsuario[0]->adm_id > 0){
@@ -66,7 +65,11 @@ class administrator extends CI_Controller{
             $asunto = "Olvide Contraseña";
             
             $this->senMailNew($asunto, $correo, $cuerpo, $responder, "", $nombre_usuario);
+            
+            $imprimirModal['imprimir'] = 1;
+            $this->session->set_userdata($imprimirModal); 
         }
-        imprimir($objUsuario);
+        
+        redirect('index/login/2');
     }
 }

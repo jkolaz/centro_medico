@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-22 11:48:45
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-23 12:41:49
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\login.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_5629136d5dcbb3_32480123',
+  'unifunc' => 'content_562a715d55a415_97658993',
   'file_dependency' => 
   array (
     'a8a16a2d4ecad755a386e20b8c587e7f45fbc65e' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\login.tpl',
-      1 => 1445531962,
+      1 => 1445622093,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_5629136d5dcbb3_32480123')) {
-function content_5629136d5dcbb3_32480123 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_562a715d55a415_97658993')) {
+function content_562a715d55a415_97658993 ($_smarty_tpl) {
 ?>
 <body>
     <div class="row vLogin">
@@ -132,15 +132,7 @@ index.php/admin/administrator/olvideClave">
             evt.preventDefault();
 
             $('#formularioLogin').submit();
-            /*
-            var correo = 'admin@admin.com';
-            var contra = 'admin';
-            if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-              $.mensajeUsuBienvenido();
-            }else{
-              $.mensajeUsuIncorrecto();
-            }
-            */
+            
         });
         
         $('#btnOlvContra').on("click", function(evt){
@@ -151,6 +143,10 @@ index.php/admin/administrator/olvideClave">
 
         $.mensajeUsuBienvenido = function(){
             swal("VMC Subastas", "Bienvenido", "success");
+        }
+        
+        $.mensajeUsuSendMail = function(){
+            swal("VMC Subastas", "En breve se le enviara un correo.", "success");
         }
 
         $.mensajeUsuIncorrecto = function(){

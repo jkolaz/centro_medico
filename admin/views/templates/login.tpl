@@ -103,15 +103,7 @@
             evt.preventDefault();
 
             $('#formularioLogin').submit();
-            /*
-            var correo = 'admin@admin.com';
-            var contra = 'admin';
-            if((correo == $('#emailLogin').val()) && (contra == $('#contraLogin').val())){
-              $.mensajeUsuBienvenido();
-            }else{
-              $.mensajeUsuIncorrecto();
-            }
-            */
+            
         });
         
         $('#btnOlvContra').on("click", function(evt){
@@ -122,6 +114,10 @@
 
         $.mensajeUsuBienvenido = function(){
             swal("VMC Subastas", "Bienvenido", "success");
+        }
+        
+        $.mensajeUsuSendMail = function(){
+            swal("VMC Subastas", "En breve se le enviara un correo.", "success");
         }
 
         $.mensajeUsuIncorrecto = function(){
