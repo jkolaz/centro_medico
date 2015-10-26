@@ -64,6 +64,9 @@ class Smartyci extends Smarty{
         } else {
             $this->assign("DIR_PRINCIPAL", $this->base_url);
             $this->include_template("contentheader", "inc/viewheader", $cache_id);
+            $this->include_template("nav", "inc/nav", $cache_id);
+            $this->include_template("Desktop", "inc/asideDesktop", $cache_id);
+            $this->include_template("Movil", "inc/asideMovil", $cache_id);
             $html = $this->fetch($page_html, $cache_id);
             $this->assign("content_main", $html);
             $this->display($this->maintpl . '.tpl');

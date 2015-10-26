@@ -1,0 +1,114 @@
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-26 17:07:43
+         compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\inc\asideDesktop.tpl" */ ?>
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/63',
+  'unifunc' => 'content_562ea42f56f4c9_03520409',
+  'file_dependency' => 
+  array (
+    '110479b9b0b903112ce45b24df1e38ad3e7a41bf' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\inc\\asideDesktop.tpl',
+      1 => 1445897167,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_562ea42f56f4c9_03520409')) {
+function content_562ea42f56f4c9_03520409 ($_smarty_tpl) {
+?>
+<div class="contenedorAside hide-on-med-and-down">
+    <aside>
+        <div class="titulosAside">
+            <div class="row">
+                <div class="col l12 m12 s12">
+                    <div class="row tituloBuscarLote">
+                        <h3>BUSCAR LOTE</h3>
+                    </div>
+                    <div class="row contenedorBuscarLote">
+                        <form>
+                            <div class="row"> 
+                                <div class="input-field col l8">
+                                    <input id="first_name" type="text" class="validate">
+                                    <label for="first_name">Placa</label>
+                                </div>
+                                <div class="col l4 ">
+                                    <a href="#" class="btn btnBuscarLote waves-effect">Buscar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                <div class="row">
+                    <h3>BOLSA</h3>
+                </div>
+                <div class="row">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header active"><i class="fa fa-file-text-o"></i>Registro de Unidades</div>
+                            <div class="collapsible-body">
+                                <div class="collection colBolsa">
+                                    <a href="#!" class="collection-item">Bolsa - Pre-Subida<span class="badge">1</span></a>
+                                    <a href="#!" class="collection-item">Bolsa<span class="badge">1</span></a>
+                                    <a href="#!" class="collection-item">Bolsa-cliente<span class="badge">1</span></a>
+                                    <a href="#!" class="collection-item">Pre-publicación<span class="badge">14</span></a>
+                                </div>
+
+                            </div>
+                        </li>
+                      <li>
+                        <div class="collapsible-header"><i class="fa fa-bar-chart"></i>Estado de Cuenta</div>
+                        <div class="collapsible-body">
+                              <div class="collection colBolsa">
+                                <a href="#!" class="collection-item">Comisión Subasta(704)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Penalización(123)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Solicitud de congelar de cuenta(286)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Anulación solicitud de congelar cuenta(148)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Comisión cliente(4)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Fee Administrativo(126)<span class="badge">US$ 309,747</span></a>
+                                <a href="#!" class="collection-item">Devolución comisión subasta(1)<span class="badge">US$ 309,747</span></a>
+                              </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="collapsible-header"><i class="fa fa-usd"></i>Totales</div>
+                        <div class="collapsible-body">
+                            <div class="collection colBolsa">
+                                <a href="#!" class="collection-item">Total Saldo(169)<span class="badge">1</span></a>
+                                <a href="#!" class="collection-item">Total Disponible(163)<span class="badge">1</span></a>
+                                <a href="#!" class="collection-item">Total en garantía retenida(32)<span class="badge">1</span></a>
+                                <a href="#!" class="collection-item">Depósitos<span class="badge">14</span></a>
+                              </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                  <h3>ADMINISTRADOR DEL SISTEMA</h3>
+                </div>
+                  <div class="row">
+                  <div class="collection colAdmSistema">
+                      <a href="afiliadosMiembros.php" class="collection-item"><i class="fa fa-users"></i> Usuarios del Sistema</a>
+                      <a href="#!" class="collection-item"><i class="fa fa-user-secret"></i> Niveles de Administradores</a>
+                      <a href="#!" class="collection-item"><i class="fa fa-cogs"></i> Módulos del Sistema</a>
+                      <a href="#!" class="collection-item"><i class="fa fa-table"></i> Secciones de 4Panel</a>
+                      <a href="#!" class="collection-item"><i class="fa fa-key"></i> Cambiar Contraseña</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <h3>RESUMEN DE SUBASTAS</h3>
+                </div>
+                  <div class="row">
+                  <div class="collection colAdmSistema">
+                      <a href="#!" class="collection-item"><i class="fa fa-user-plus"></i> Grupo Activo</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div><?php }
+}

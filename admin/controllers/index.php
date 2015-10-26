@@ -37,6 +37,7 @@ class Index extends CI_Controller{
                 $this->session->unset_userdata($imprimir); 
                 break;
         }
+        $this->smartyci->maintpl = "mainClear";
         $this->smartyci->assign("js_error", $js_error);
         $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
         
