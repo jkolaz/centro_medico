@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-26 17:24:31
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-27 00:09:08
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\principal.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_562ea81fc43f77_67199729',
+  'unifunc' => 'content_562f06f45382c3_91941333',
   'file_dependency' => 
   array (
     '041e6354762dcfc61ae878a95397f5244b3a9d42' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\principal.tpl',
-      1 => 1445898267,
+      1 => 1445922542,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_562ea81fc43f77_67199729')) {
-function content_562ea81fc43f77_67199729 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_562f06f45382c3_91941333')) {
+function content_562f06f45382c3_91941333 ($_smarty_tpl) {
 ?>
 <div class="contenedorPrincipal">
           <div class="row">
@@ -30,7 +30,8 @@ function content_562ea81fc43f77_67199729 ($_smarty_tpl) {
                   <div class="col l12 s12 m12">
                     <h3>Afiliados</h3>
                     <h4>Miembros</h4>
-                    <a href="crearUsuarioNuevo.php" class="waves-effect btnAgrNuevoUsuario">Nuevo Usuario</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
                     <div class="row">
                         <div class="col l12 m12 s12 contBuscarAfiliado">
                           <p class="labelBuscaAfiliado">Búsqueda</p>

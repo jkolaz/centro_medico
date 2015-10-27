@@ -7,7 +7,7 @@
                   <div class="col l12 s12 m12">
                     <h3>Afiliados</h3>
                     <h4>Miembros</h4>
-                    <a href="crearUsuarioNuevo.php" class="waves-effect btnAgrNuevoUsuario">Nuevo Usuario</a>
+                    <a href="{$base_url}index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
                     <div class="row">
                         <div class="col l12 m12 s12 contBuscarAfiliado">
                           <p class="labelBuscaAfiliado">Búsqueda</p>

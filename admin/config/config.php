@@ -16,7 +16,8 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://www.centro_medico.devel/';
+//$config['base_url'] = 'http://www.centro_medico.devel/';
+$config['base_url'] = 'http://localhost/centro_medico/';
 
 /*
 |--------------------------------------------------------------------------

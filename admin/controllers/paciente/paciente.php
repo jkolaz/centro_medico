@@ -7,16 +7,15 @@
  */
 
 /**
- * Description of principal
+ * Description of paciente
  *
- * @author VMC-D02
+ * @author julio
  */
-class Principal extends CI_Controller{
+class paciente extends CI_Controller{
     //put your code here
     public function __construct() {
         parent::__construct();
     }
-    
     public function index(){
         if($this->session->userdata('user')!=NULL && $this->session->userdata('user') > 0){
             $this->smartyci->assign("base_url", $this->smartyci->base_url);
@@ -34,6 +33,24 @@ class Principal extends CI_Controller{
             $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
             $this->smartyci->show_page('principal.tpl',  uniqid());
             
+        }else{
+            redirect('index');
+        }
+    }
+    
+    public function nuevo(){
+        if($this->session->userdata('user')!=NULL && $this->session->userdata('user') > 0){
+            $this->smartyci->assign("base_url", $this->smartyci->base_url);
+            $this->smartyci->assign("cerrar_sesion", $this->_url_logout);
+            $this->smartyci->assign("usuario_nombre", $this->session->userdata('nombre'). " " .$this->session->userdata('apellido'));
+            //imprimir($this->session->userdata);
+            $stdfecha = format_date_actual();
+            $this->smartyci->assign('dia_text', $stdfecha->dia_text);
+            $this->smartyci->assign('dia_num', date('d'));
+            $this->smartyci->assign('mes_text', $stdfecha->mes_text);
+            $this->smartyci->assign('anio_num', date('Y'));
+            $this->smartyci->include_template('include_script1', 'inc/script', uniqid());
+            $this->smartyci->show_page('paciente_nuevo.tpl',  uniqid());
         }else{
             redirect('index');
         }

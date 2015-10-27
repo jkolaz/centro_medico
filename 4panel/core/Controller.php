@@ -31,8 +31,8 @@
 class CI_Controller {
 
 	private static $instance;
-
-	/**
+        public $_url_logout = "admin/administrator/cerrar_sesion";
+        /**
 	 * Constructor
 	 */
 	public function __construct()

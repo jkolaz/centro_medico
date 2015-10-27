@@ -72,4 +72,17 @@ class administrator extends CI_Controller{
         
         redirect('index/login/2');
     }
+    
+    public function cerrar_sesion(){
+        $arreglo = array();
+        $arreglo['user'] = "";
+        $arreglo['usuario'] = "";
+        $arreglo['correo'] = "";
+        $arreglo['nombre'] = "";
+        $arreglo['apellido'] = "";
+        $arreglo['cambio_clave'] = "";
+        $arreglo['tipo'] = "";
+        $this->session->unset_userdata($arreglo);
+        redirect();
+    }
 }
