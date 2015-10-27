@@ -1,3 +1,26 @@
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-27 18:04:12
+         compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\paciente.tpl" */ ?>
+<?php
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'has_nocache_code' => false,
+  'version' => '3.1.28-dev/63',
+  'unifunc' => 'content_563002eceda2c1_54409966',
+  'file_dependency' => 
+  array (
+    '29135ff6999498ecca0a1e948342376429271b13' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\paciente.tpl',
+      1 => 1445987049,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false);
+if ($_valid && !is_callable('content_563002eceda2c1_54409966')) {
+function content_563002eceda2c1_54409966 ($_smarty_tpl) {
+?>
 <div class="contenedorPrincipal">
     <div class="row">
         <div class="col l12 m12 s12">
@@ -7,7 +30,8 @@
                     <div class="col l12 s12 m12">
                         <h3>Afiliados</h3>
                         <h4>Miembros</h4>
-                        <a href="{$base_url}index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
+                        <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
                         <div class="row">
                             <div class="col l12 m12 s12 contBuscarAfiliado">
                                 <p class="labelBuscaAfiliado">Búsqueda</p>
@@ -30,8 +54,15 @@
                     </div>
                     <!--fin busqueda afiliados-->  
                     <!--inicio contenedor afiliados (1)-->   
-            {if $objPaciente|@count gt 0}
-                {section name=cont loop=$objPaciente }
+            <?php if (count($_smarty_tpl->tpl_vars['objPaciente']->value) > 0) {?>
+                <?php
+$__section_cont_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_cont']) ? $_smarty_tpl->tpl_vars['__section_cont'] : false;
+$__section_cont_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['objPaciente']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_cont_0_total = $__section_cont_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_cont'] = new Smarty_Variable(array());
+if ($__section_cont_0_total != 0) {
+for ($__section_cont_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] = 0; $__section_cont_0_iteration <= $__section_cont_0_total; $__section_cont_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']++){
+?>
                     <div class="col l12 m12 s12 contenedorAfiliados">
                         <div class="row">
                             <div class="col l12 s12 m12">
@@ -48,19 +79,24 @@
                                                     </li>
                                                     <li class="afDatos">
                                                         <p>
-                                                            {$objPaciente[cont]->pac_nombre}
-                                                            {$objPaciente[cont]->pac_apellido_paterno}
-                                                            {$objPaciente[cont]->pac_apellido_materno}
+                                                            <?php echo $_smarty_tpl->tpl_vars['objPaciente']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] : null)]->pac_nombre;?>
+
+                                                            <?php echo $_smarty_tpl->tpl_vars['objPaciente']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] : null)]->pac_apellido_paterno;?>
+
+                                                            <?php echo $_smarty_tpl->tpl_vars['objPaciente']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] : null)]->pac_apellido_materno;?>
+
                                                         </p>
                                                     </li>
                                                     <li class="afDatos">
-                                                        <p>DNI {$objPaciente[cont]->pac_dni}</p>
+                                                        <p>DNI <?php echo $_smarty_tpl->tpl_vars['objPaciente']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] : null)]->pac_dni;?>
+</p>
                                                     </li>
                                                     <li class="afDatos">
                                                         <p>267390 / edu356</p>
                                                     </li>
                                                     <li class="afDatos">
-                                                        <p>{$objPaciente[cont]->pac_correo}</p>
+                                                        <p><?php echo $_smarty_tpl->tpl_vars['objPaciente']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_cont']->value['index'] : null)]->pac_correo;?>
+</p>
                                                     </li>
                                                     <li class="afTitulo">
                                                         <p>Cliente</p>
@@ -143,15 +179,23 @@
                             </div>
                         </div>
                     </div>
-                {/section}
-            {/if}        
+                <?php
+}
+}
+if ($__section_cont_0_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_cont'] = $__section_cont_0_saved;
+}
+?>
+            <?php }?>        
                     <!--fin contenedor afiliados-->
                     <!--inicio modal ver datos afiliados-->
-                    {$modal_ver_datos_afiliados}
+                    <?php echo $_smarty_tpl->tpl_vars['modal_ver_datos_afiliados']->value;?>
+
                     <!--fin modal ver datos afiliados-->
 
                     <!--inicio modal agregar saldo-->
-                    {$modal_agregar_saldo}
+                    <?php echo $_smarty_tpl->tpl_vars['modal_agregar_saldo']->value;?>
+
                     <!--fin modal agregar saldo-->
                 </div>
             </div>
@@ -160,9 +204,11 @@
 </div>
         
 
-{$include_script1}
+<?php echo $_smarty_tpl->tpl_vars['include_script1']->value;?>
 
-<script type="text/javascript">
+
+<?php echo '<script'; ?>
+ type="text/javascript">
     $(document).ready(function (){
         $('.collapsible').collapsible({
               accordion : false 
@@ -170,4 +216,6 @@
         $('select').material_select();
         $('.modal-trigger').leanModal();
     });
-</script>
+<?php echo '</script'; ?>
+><?php }
+}
