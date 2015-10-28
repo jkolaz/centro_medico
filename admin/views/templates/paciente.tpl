@@ -10,21 +10,22 @@
                         <a href="{$base_url}index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
                         <div class="row">
                             <div class="col l12 m12 s12 contBuscarAfiliado">
-                                <p class="labelBuscaAfiliado">Búsqueda</p>
-                                <div class="col l4 m5 s12">
-                                    <select>
-                                        <option value="1">Código de Miembro</option>
-                                        <option value="2">Nombre</option>
-                                        <option value="3">Documento</option>
-                                        <option value="4">Documento</option>
-                                    </select>
-                                </div>
-                                <div class="col l5 m4 s12">
-                                    <input type="text" placeholder="Busqueda" class="validate">
-                                </div>
-                                <div class="col l3 m3 s12">
-                                    <a href="#" class="btn btnBuscarAfiliados waves-effect">Buscar</a>
-                                </div>
+                                <form action="" method="POST" name="frmBuscar" id="frmBuscar">
+                                    <p class="labelBuscaAfiliado">Búsqueda</p>
+                                    <div class="col l4 m5 s12">
+                                        <select>
+                                            <option value="1">DNI</option>
+                                            <option value="2">NOMBRE</option>
+                                            <option value="3">APELLIDOS</option>
+                                        </select>
+                                    </div>
+                                    <div class="col l5 m4 s12">
+                                        <input type="text" placeholder="Busqueda" class="validate">
+                                    </div>
+                                    <div class="col l3 m3 s12">
+                                        <a href="#" class="btn btnBuscarAfiliados waves-effect" id="aBuscar">Buscar</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -169,5 +170,9 @@
             });
         $('select').material_select();
         $('.modal-trigger').leanModal();
+        
+        $('#aBuscar').click(function(){
+            $("#frmBuscar").submit();
+        });
     });
 </script>

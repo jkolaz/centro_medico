@@ -18,6 +18,8 @@ class Principal extends CI_Controller{
     }
     
     public function index(){
+        redirect(URL_PANEL);
+        exit;
         if($this->session->userdata('user')!=NULL && $this->session->userdata('user') > 0){
             $this->smartyci->assign("base_url", $this->smartyci->base_url);
             $this->smartyci->assign("cerrar_sesion", $this->_url_logout);

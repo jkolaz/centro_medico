@@ -1,16 +1,16 @@
-<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-27 18:04:12
+<?php /* Smarty version 3.1.28-dev/63, created on 2015-10-28 18:02:11
          compiled from "C:\xampp\htdocs\centro_medico\admin\views\templates\paciente.tpl" */ ?>
 <?php
 $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
   'version' => '3.1.28-dev/63',
-  'unifunc' => 'content_563002eceda2c1_54409966',
+  'unifunc' => 'content_563153f348f699_23236726',
   'file_dependency' => 
   array (
     '29135ff6999498ecca0a1e948342376429271b13' => 
     array (
       0 => 'C:\\xampp\\htdocs\\centro_medico\\admin\\views\\templates\\paciente.tpl',
-      1 => 1445987049,
+      1 => 1446073320,
       2 => 'file',
     ),
   ),
@@ -18,8 +18,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
   ),
 ),false);
-if ($_valid && !is_callable('content_563002eceda2c1_54409966')) {
-function content_563002eceda2c1_54409966 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_563153f348f699_23236726')) {
+function content_563153f348f699_23236726 ($_smarty_tpl) {
 ?>
 <div class="contenedorPrincipal">
     <div class="row">
@@ -34,21 +34,22 @@ function content_563002eceda2c1_54409966 ($_smarty_tpl) {
 index.php/paciente/paciente/nuevo" class="waves-effect btnAgrNuevoUsuario">Nuevo Paciente</a>
                         <div class="row">
                             <div class="col l12 m12 s12 contBuscarAfiliado">
-                                <p class="labelBuscaAfiliado">Búsqueda</p>
-                                <div class="col l4 m5 s12">
-                                    <select>
-                                        <option value="1">Código de Miembro</option>
-                                        <option value="2">Nombre</option>
-                                        <option value="3">Documento</option>
-                                        <option value="4">Documento</option>
-                                    </select>
-                                </div>
-                                <div class="col l5 m4 s12">
-                                    <input type="text" placeholder="Busqueda" class="validate">
-                                </div>
-                                <div class="col l3 m3 s12">
-                                    <a href="#" class="btn btnBuscarAfiliados waves-effect">Buscar</a>
-                                </div>
+                                <form action="" method="POST" name="frmBuscar" id="frmBuscar">
+                                    <p class="labelBuscaAfiliado">Búsqueda</p>
+                                    <div class="col l4 m5 s12">
+                                        <select>
+                                            <option value="1">DNI</option>
+                                            <option value="2">NOMBRE</option>
+                                            <option value="3">APELLIDOS</option>
+                                        </select>
+                                    </div>
+                                    <div class="col l5 m4 s12">
+                                        <input type="text" placeholder="Busqueda" class="validate">
+                                    </div>
+                                    <div class="col l3 m3 s12">
+                                        <a href="#" class="btn btnBuscarAfiliados waves-effect" id="aBuscar">Buscar</a>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -215,6 +216,10 @@ $_smarty_tpl->tpl_vars['__smarty_section_cont'] = $__section_cont_0_saved;
             });
         $('select').material_select();
         $('.modal-trigger').leanModal();
+        
+        $('#aBuscar').click(function(){
+            $("#frmBuscar").submit();
+        });
     });
 <?php echo '</script'; ?>
 ><?php }

@@ -37,7 +37,7 @@ class administrator extends CI_Controller{
                 $arreglo['cambio_clave'] = $objUsuario[0]->adm_fecha_cambio_clave;
                 $arreglo['tipo'] = $objUsuario[0]->adm_ta_id;
                 $this->session->set_userdata($arreglo); 
-                redirect('principal');
+                redirect(URL_PANEL);
             }else{
                 $this->session->set_userdata($input); 
                 redirect('index/login/1');
